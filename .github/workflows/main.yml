@@ -19,10 +19,10 @@
 
   name: Github action ofr
   on: push
-    jobs:
-   build:
-    runs-on: ubuntu-latest
-     steps:
-      -uses: actions/checkout@v3
-      -name: Print Hello World
-       run: node --version
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+       -uses: actions/checkout@v3
+       -name: Print Hello World
+        run: node --version
