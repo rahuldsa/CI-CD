@@ -1,29 +1,28 @@
-# workflow
-# configuration file
+# # workflow
+# # configuration file
 
-title: Website Name
-description: A website for uploading content
-age: 30
+# title: Website Name
+# description: A website for uploading content
+# age: 30
 
-tags: -technology
-  -images
-  -creative
+# tags: -technology
+#   -images
+#   -creative
 
-address:
-  street: MG Road
-  city: Bangalore
-  state: KA
+# address:
+#   street: MG Road
+#   city: Bangalore
+#   state: KA
 
-  value: ${{env.VALUE}}
-  variable: ${{github.VARIABLE_NAME}}
+#   value: ${{env.VALUE}}
+#   variable: ${{github.VARIABLE_NAME}}
 
   name: Github action ofr
-  on:
-    push: branches:[main]
-  jobs:
+  on: push
+    jobs:
    build:
     runs-on: ubuntu-latest
      steps:
-      -uses: actions/checkout@v2
+      -uses: actions/checkout@v3
       -name: Print Hello World
-      -run: echo "Hello World!"
+       run: node --version
